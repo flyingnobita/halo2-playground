@@ -10,10 +10,12 @@ doctest = false
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [features]
-default = ["dev-graph"]
+default = ["dev-graph", "dev-graph-zcash"]
 dev-graph = ["halo2_proofs/dev-graph", "plotters"]
+dev-graph-zcash = ["halo2_proofs_zcash/dev-graph", "plotters"]
 
 [dependencies]
-halo2_proofs = { git = "https://github.com/privacy-scaling-explorations/halo2", tag = "v0.3.0"}
-# halo2curves = { git = "https://github.com/privacy-scaling-explorations/halo2curves"}
+halo2_proofs = { git = "https://github.com/privacy-scaling-explorations/halo2", tag = "v0.3.0" }
+halo2_proofs_zcash = { package = "halo2_proofs", git = "https://github.com/zcash/halo2", rev = "a898d65ae3ad3d41987666f6a03cfc15edae01c4" } # halo2_proofs_zcash of this commit contains arithmetic::FieldExt
+# halo2_proofs_zcash = { package = "halo2_proofs", git = "https://github.com/zcash/halo2" } # halo2_proofs_zcash contains arithmetic::FieldExt
 plotters = { version = "0.3.4", optional = true }
