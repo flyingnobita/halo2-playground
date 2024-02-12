@@ -17,5 +17,6 @@ dev-graph-zcash = ["halo2_proofs_zcash/dev-graph", "plotters"]
 [dependencies]
 halo2_proofs = { git = "https://github.com/privacy-scaling-explorations/halo2", tag = "v0.3.0" }
 halo2_proofs_zcash = { package = "halo2_proofs", git = "https://github.com/zcash/halo2", rev = "a898d65ae3ad3d41987666f6a03cfc15edae01c4" } # halo2_proofs_zcash of this commit contains arithmetic::FieldExt
-# halo2_proofs_zcash = { package = "halo2_proofs", git = "https://github.com/zcash/halo2" } # halo2_proofs_zcash contains arithmetic::FieldExt
+ff = "0.12"
+rand = "0.8"
 plotters = { version = "0.3.4", optional = true }

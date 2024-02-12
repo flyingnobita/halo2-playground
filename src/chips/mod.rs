@@ -6,3 +6,5 @@ pub mod range_check_2;
 pub mod range_check_2_table;
 pub mod range_check_3;
 pub mod range_check_3_table;
+pub mod range_check_4;
+pub mod range_check_4_table;
